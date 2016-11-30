@@ -2,7 +2,7 @@
 <html lang=en>
         <head>
                 <meta charset=utf-8>
-                <title>OpenWest 2014</title>
+                <title>WebGL in 2016</title>
                 <meta name=author content=@infil00p>
                 <meta name=apple-mobile-web-app-capable content=yes>
                 <meta name=apple-mobile-web-app-status-bar-style content=black-translucent>
@@ -58,213 +58,100 @@
                 <div class=reveal>
                         <div class="slides">
         <section>
-          <h2 style=margin-bottom:105px;>Apache Cordova and PhoneGap: Past, Present, Future</h2>
+          <h2 style=margin-bottom:105px;>WebVR development with Boilerplate and AFrame</h2>
           <h4 style=color:#ccc;>Joe Bowser - jbowser@adobe.com</h4>
         </section>
         <section>
-            What is Apache Cordova?
-        </section>
-        <section data-state=bg-white>
-            <h2 style=margin-bottom:105px;color:#333;>Apache Cordova</h2>
-            <h4 style=color:#ccc;>Build apps with HTML, CSS, and JavaScript.</h4>
+          <h2>Getting started with WebVR Today</h2>
         </section>
         <section>
-          <h2>Adobe PhoneGap</h2>
-        </section>
-        <section>
-          <h2>Cross-Platform Mobile Development</h2>
-        </section>
-        <section>
-          <h2>Access to Device APIs by plugin</h2>
-            <ul style=align:left;list-style:none;>
-              <li>Minimal set of supported APIs</li>
-              <li>Large set of community APIs</li>
-              <li>Can be found at <a href="http://plugins.cordova.io">plugins.cordova.io</a></li>
+            <h2>WebVR platforms</h2>
+            <ul style=align:left>
+              <li>Oculus Rift</li>
+              <li>HTC Vive</li>
+              <li>Google Cardboard</li>
             </ul>
         </section>
-         <section data-state=bg-white>
-            <h2 style=color:#333>Helps put your app in the store! (No guarantees)</h2>
-            <img width=100 src=img/app-store.png style=border:none;box-shadow:none;>
-            <img width=100 src=img/play.jpeg style=border:none;box-shadow:none;>
-            <img width=100 src=img/bb.jpg style=border:none;box-shadow:none;>
-            <img width=100 src=img/marketplace.jpg style=border:none;box-shadow:none;>
-            <aside class=notes>
-                <ul>
-                    <li>Interestingly, most app stores are all hybrid apps themselves.</li>
-                </ul>
-            </aside>
-        </section>
-
-        <section data-state=bg-white>
-        <h2>Who does Cordova dev?</h2>
-        <img width=100 src=img/adobe.jpg style=border:none;box-shadow:none;>
-        <img width=80 src=img/bblogo.jpg style=border:none;box-shadow:none;>
-        <img width=180 src=img/google.jpg style=border:none;box-shadow:none;>
-        <img width=250 src=img/msft.jpg style=border:none;box-shadow:none;><br>
-        <img width=140 src=img/ibm.jpg style=border:none;box-shadow:none;>
-        <img width=100 src=img/intel.jpg style=border:none;box-shadow:none;>
-        <img width=100 src=img/moz.jpeg style=border:none;box-shadow:none;>
-        <img width=100 src=img/lg.jpeg style=border:none;box-shadow:none;>
-        </section>
         <section>
-            <h2>How to contribute?</h2>
-            <a href=http://wiki.apache.org/cordova/ContributorWorkflow>More on our wiki.</a>
-        </section>
-         <section>
-            <h2>The Story of Cordova...</h2>
-            <p style="font-style: italic">"The goal of PhoneGap is to cease to exist"</p>
-        </section>
-         <section>
-            <h2>Free and Open Source Since 2008</h2>
-        </section>
-        <section>
-            <h3>2008 - Beer Nerds &lt;3 Mobile Web</h3>
-            <h4 style=color:#ccc;>iPhone SDK, Blackberry 4.2, &amp Android 1.0</h4>
-            <aside class=notes>
-            philsophy, rob/brock/joe/dave pivotal
-            </aside>
-        </section>
-        <section>
-            <h2>2009 - iOS was the priority</h2>
-            <h4 style="font-style: italic; color:#ccc;">Oh you do Android, why?!?</h4>
-            <aside class=notes>
-              oscon, oreilly disrupt, apple rejection
-            </aside>
-        </section>
-        <section>
-            <h2>2010 - Getting Contributors</h2>
-            <h4 style=color:#ccc;>Big Blue and PhoneGap/Build.</h4>
-        </section>
-        <section>
-            <h2>2011 - Growing Pain</h2>
-            <h4 style=color:#ccc;>1.0, Adobe, and Apache.</h4>
-        </section>
-        <section>
-            <h2>2012 - CordovaWebView</h2>
-            <h4 style=color:#ccc;>2.0, and 1 million downloads.</h4>
-            <aside class=notes>
-            cordova js, platform scripts, webview, windows phone
-            </aside>
-        </section>
-        <section>
-            <h2>2013 - Optionally Opinionated</h2>
-            <h4 style=color:#ccc;>3.0 w/ over 2 million downloads.</h4>
-            <aside class=notes>
-              cli install, unfied project structure, faster, plugins
-            </aside>
-        </section>
-        <section>
-            <h2>2014</h2>
-            <h4 style=color:#ccc;>What happened?</h4>
-        </section>
-        <section data-state=bg-red>
-            <h3>Is it possible to quickly build a FAST app using HTML, CSS, and JavaScript that has a consistent look and feel and works properly across devices?</h3>
-        </section>
-         <section data-state=bg-white>
-          <h2 style=margin-bottom:105px;color:#333;>Yes, but it takes work!</h2>
-        </section>
-        <section data-state=bg-red>
-            <h3>Android WebView</h3>
-            <p style="font-style: italic">"The IE6 of Mobile Development"</p>
-        </section>
-        <section>
-                <h2>Things outside our control:</h2>
-                <ul style=align:left;list-style:none;>
-                  <li>Rendering issues (Media queries)</li>
-                  <li>iFrame support breaking</li>
-                  <li>Support for Android Resources and Android Assets</li>
-                  <li>URI encoding bugs</li>
-                  <li>Browser History Bugs</li>
-                  <li>Text-Field Issues</li>
-                </ul>
-                <aside class=notes><ul></ul></aside>
-         </section>
-         <section>
-           <h2>Targeting Android</h2>
-           <img src="img/pie_chart.png">
-           <a href="http://developer.android.com/about/dashboards/index.html">http://developer.android.com/about/dashboards/index.html</a>
-        </section>
-         <section>
-                <h2>History of this issue:</h2>
-                <ul style=align:left;list-style:none;>
-                  <li>Six years of errors</li>
-                  <li>Weird Android bugs with various frameworks</li>
-                  <li>Performance issues on Android</li>
-                  <li>Bugs left as "Won't Fix" without any options for the user</li>
-                </ul>
-                <aside class=notes><ul></ul></aside>
-         </section>
-
-       <section data-state=bg-white>
-            <h2 style=margin-bottom:105px;color:#333;>Third Party WebView</h2>
-            <h4 style=color:#ccc;>Use third party webviews your apps.</h4>
-        </section>
-        <section>
-            <h2>Installable via a plugin</h2>
-            <h4 style=color:#ccc;>plugman install crosswalk</h4>
-        </section>
-        </section>
-        <section>
-            <h2>DEMO TIME - Chrome Debugging</h2>
-        </section>
-        <section data-state=bg-red>
-            <h3>Warning: I might make fun of your phone! Sorry!</h3>
-        </section>
-        <section>
-            <h2>Real Talk</h2>
-                <ul style=align:left;list-style:none;>
-                  <li>Makes the app a lot bigger</li>
-                  <li>Instead of Android WebView bugs, you have third-party bugs</li>
-                  <li>Third-Party WebView may not start as fast as Android WebView</li>
-                  <li>This is solving minor problems with a sledgehammer</li>
-                </ul>
-        </section>
-        <section>
-            <h2>Having a sledgehammer is better than having no tool at all</h2>
-        </section>
-        <section>
-            <h2>Another example/demo</h2>
-        </section>
-        <section>
-            <h2>Cordova on AndroidWear</h2>
-            <ul style=align:left;list-style:none;>
-              <li>Just got working this morning</li>
-              <li>AndroidWear doesn't have a WebView</li>
-              <li>Thanks to this feature, we can bring our own</li>
-              <li>Super experimental, surprised this worked!</li>
-              <li>Now where Android is, we can be too.</li>
+            <h2>WebVR platforms: Cost</h2>
+            <ul style=align:left>
+              <li>Oculus Rift - $849 CAD</li>
+              <li>HTC Vive - $1,585.43 CAD</li>
+              <li>Google Cardboard - $9.99 CAD</li>
             </ul>
         </section>
-         <section>
-                <h2>Availability:</h2>
-                <ul style=align:left;list-style:none;>
-                  <li>Exists today in the 4.0.x branch of Cordova</li>
-                  <li>Currently only has Crosswalk as a third-party webview</li>
-                  <li>Hope to have Mozilla GeckoView and others soon</li>
-                  <li>Warning: The API is changing rapidly.  (Don't be afraid to give feedback)</li>
-                </ul>
-                <aside class=notes><ul></ul></aside>
-         </section>
-               <section data-state=soothe>
-                <h2>To summarize</h2>
-                <ul style=align:left;list-style:none;>
-                  <li>In 2014, the Web still isn't a first class platform on mobile</li>
-                  <li>Apache Cordova can make web apps first class citizens</li>
-                  <li>More tools are existing for hybrid apps</li>
-                  <li>Third Party Webviews are going to be awesome</li>
-                </ul>
-                <aside class=notes><ul></ul></aside>
-                </section>
-
-                <section>
-                    <h2>Thank You</h2>
-                <ul style=align:left;list-style:none;>
-                  <li><a href="http://cordova.apache.org">http://cordova.apache.org</a></li>
-                  <li><a href="http://phonegap.com">http://phonegap.com</a></li>
-                </ul>
-
-                </section>
-                
+        <section>
+            <h2>Other neat toys</h2>
+            <ul style=align:left>
+              <li>Photospheres</li>
+              <li>360 Cameras</li>
+            </ul>
+        </section>
+        <section data-state=bg-white>
+            <h2 style=margin-bottom:105px;color:#333;>Google Cardboard</h2>
+            <img src="img/cardboard.gif"></img>
+        </section>
+        <section>
+            <h2>WebVR Boilerplate</h2>
+            <ul style=align:left>
+              <li>Created in 2015 by Boris Smus</li>
+              <li>Good starting point for WebVR across multiple devices</li>
+              <li>Good for people who are comfortable with three.js</li>
+            </ul>
+        </section>
+        <section>
+          <h2>First Demonstration</h2>
+        </section>
+        <section>
+          <h2>Advantages of using just Boilerplate</h2>
+          <ul>
+            <li>You get more control over the 3D scene, objects, etc</li>
+            <li>If you know three.js, you know how to use the Boilerplate</li>
+            <li>three_js can import STL files</li>
+          </ul>
+        </section>
+        <section>
+            <h2>A-Frame</h2>
+            <ul style=align:left>
+              <li>Created by Mozilla in 2015</li>
+              <li>Very popular, because you can do impressive things fast</li>
+              <li>Easy to get far very easily</li>
+            </ul>
+        </section>
+        <section>
+          <h2>Second Demo</h2>
+        </section>
+        <section>
+          <h2>Lessons learned about WebGL, Mobile, Performance</h2>
+          <ul>
+            <li>The DOM still sucks</li>
+            <li>Simple shapes are the best</li>
+            <li>Models are hard</li>
+            <li>Not all browsers are equal</li>
+            <li>Still a good idea to test on an actual device</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Models</h2>
+          <ul>
+            <li>3D models come in different forms</li>
+            <li>Free tools include Blender and <a href="https://clara.io">clara.io</a></li>
+            <li>Paid tools are from Autodesk and others</li>
+            <li>Adobe Photoshop was used for at least one demo presented</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Show Me The Code</h2>
+          <ul>
+            <li><a href="https://github.com/infil00p/cordova-photosphere-example">Cordova Photosphere Example</a></li>
+            <li><a href="https://github.com/infil00p/confoo-photosphere">A-Frame Photosphere</a></li>
+            <li><a href="https://github.com/infil00p/confoo-model-fail">A-Frame model fail.</li>
+            <li><a href="https://github.com/infil00p/confoo-videosphere">A Frame Video Sphere example</li>
+          </ul>
+        </section>
+        <section>
+            <h2>Thank You</h2>
+        </section>
 
 
 
