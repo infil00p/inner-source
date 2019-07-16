@@ -2,7 +2,7 @@
 <html lang=en>
         <head>
                 <meta charset=utf-8>
-                <title>WebGL in 2016</title>
+                <title>From Open Source to Inner Source</title>
                 <meta name=author content=@infil00p>
                 <meta name=apple-mobile-web-app-capable content=yes>
                 <meta name=apple-mobile-web-app-status-bar-style content=black-translucent>
@@ -58,101 +58,143 @@
                 <div class=reveal>
                         <div class="slides">
         <section>
-          <h2 style=margin-bottom:105px;>WebVR development with Boilerplate and AFrame</h2>
+          <h2 style=margin-bottom:105px>Journey From Open Source to Inner Source</h2>
           <h4 style=color:#ccc;>Joe Bowser - jbowser@adobe.com</h4>
         </section>
         <section>
-          <h2>Getting started with WebVR Today</h2>
+            <h2>Disclaimer</h2>
+            <p>The content of this presentation are the views and opinions of the speaker, and may not necessarily reflect the views of Adobe.</p>
         </section>
         <section>
-            <h2>WebVR platforms</h2>
-            <ul style=align:left>
-              <li>Oculus Rift</li>
-              <li>HTC Vive</li>
-              <li>Google Cardboard</li>
+            <h2>PhoneGap</h2>
+            <img src="img/PhoneGap-Symbol-White.png" />
+        </section>
+        <section>
+            <ul>
+                <li>Started in 2008</li>
+                <li>MIT Licence</li>
+                <li>Hundreds of contributors</li>
+                <li>Started on GitHub</li>
+                <li>Standard Open Source project, no process necessary</li>
             </ul>
         </section>
         <section>
-            <h2>WebVR platforms: Cost</h2>
+            <img src="img/cordova_logo_normal.png" />
+        </section>
+        <section>
+            <h2>Apache Cordova</h2>
             <ul style=align:left>
-              <li>Oculus Rift - $849 CAD</li>
-              <li>HTC Vive - $1,585.43 CAD</li>
-              <li>Google Cardboard - $9.99 CAD</li>
+                <li>Adobe acquired Nitobi, PhoneGap became Apache Cordova</li>
+                <li>Management of Nitobi, IBM and others determined where to donate</li>
+                <li>Apache Cordova came out of Incubation in 2012</li>
             </ul>
         </section>
         <section>
-            <h2>Other neat toys</h2>
-            <ul style=align:left>
-              <li>Photospheres</li>
-              <li>360 Cameras</li>
-            </ul>
-        </section>
-        <section data-state=bg-white>
-            <h2 style=margin-bottom:105px;color:#333;>Google Cardboard</h2>
-            <img src="img/cardboard.gif"></img>
+            <img src="img/The_Apache_Way.png" />
         </section>
         <section>
-            <h2>WebVR Boilerplate</h2>
-            <ul style=align:left>
-              <li>Created in 2015 by Boris Smus</li>
-              <li>Good starting point for WebVR across multiple devices</li>
-              <li>Good for people who are comfortable with three.js</li>
+            <h2>The Apache Way</h2>
+            <ul>
+                <li>Decisions are made on the mailing list</li>
+                <li>The Project Management Committee(PMC) can determine when to release</li>
+                <li>The PMC has to vote on the release</li>
+                <li>The PMC can nominate members and members are added by the Board</li>
+                <li>Projects must be hosted on ASF controlled infrastructure</li>
+                <li>Meritocracy, Consensus, etc</li>
             </ul>
         </section>
         <section>
-          <h2>First Demonstration</h2>
+            <h2>What that meant for PhoneGap/Cordova</h2>
+            <ul>
+                <li>Decisions became much slower, and got more heated</li>
+                <li>Cordova had to move away from the community, using JIRA, git-web, etc</li>
+                <li>Angry users demanding that we use GitHub instead of ASF infra</li>
+                <li>Angry meetings with Management demanding that we force a release</li>
+                <li>Developer burnout occured</li>
+            </ul>
         </section>
         <section>
-          <h2>Advantages of using just Boilerplate</h2>
+            <h2>Life after Open Source</h2>
+            <img src="img/sabbatical.jpg" />
+        </section>
+        <section>
+            <h2>Sensei OnDevice</h2>
+            <ul style=align:left>
+                <li>An SDK to develop ML features inside Adobe Products</li>
+                <li>An internal product for various Adobe products</li>
+                <li>Used in new proprietary (not-Open) features</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Why Inner Source</h2>
+            <ul>
+                <li>Current team consists of three developers</li>
+                <li>Other teams in the company were already further along</li>
+                <li>Team has to support rollouts to multiple products</li>
+                <li>The SDK has to work with existing products build systems</li>
+                <li>Easier to earn buy-in support from various stakeholders</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Expectations</h2>
+            <ul>
+                <li>Everything would live in the Internal GitHub</li>
+                <li>Code sharing inside the company would be seamless</li>
+                <li>Since only internal collaborators are working on it, things should be easy</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Reality</h2>
+            <ul>
+                <li>Company mandated tools like JIRA cause issues to be hidden</li>
+                <li>Not everyone is using Corporate Git</li>
+                <li>Various silos depending on business unit</li>
+                <li>Git and Perforce repositories go out of sync w.r.t adoption</li>
+                <li>The Build Engineering Struggle is real</li>
+            </ul>
+        </section>
+        <section>
+          <h2>Management</h2>
           <ul>
-            <li>You get more control over the 3D scene, objects, etc</li>
-            <li>If you know three.js, you know how to use the Boilerplate</li>
-            <li>three_js can import STL files</li>
+              <li>The ASF has committees who manage the project and determine process</li>
+              <li>Most companies practicing Agile/Lean/Scrum have various managers</li>
+              <li>Critical that Management be on board</li>
+              <li>Inner Source may work faster than the speed of management</li>
           </ul>
         </section>
         <section>
-            <h2>A-Frame</h2>
+          <h2>Releases</h2>
+          <ul>
+            <li>Sensei On Device SDK uses semver</li>
+            <li>Releases are based on client need</li>
+            <li>Releases are internal and go through a QA and Legal process</li>
+          </ul>
+        </section>
+ 
+        <section>
+            <h2>Things that can help for both</h2>
+            <ul>
+              <li>Be active where your users are</li>
+              <li>Using GitHub/GitCorp for everything</li>
+              <li>Establishing a clear, agreed upon method of contrbution</li>
+              <li>Being able to listen and act on the desires of your users</li>
+          </ul>
+        </section>
+        <section>
+            <h2>Takeaways</h2>
             <ul style=align:left>
-              <li>Created by Mozilla in 2015</li>
-              <li>Very popular, because you can do impressive things fast</li>
-              <li>Easy to get far very easily</li>
+                <li>Getting process just-right matters</li>
+                <li>"Inner Source" can be more agile than Open Souce</li>
+                <li>"Inner Source" often moves faster than management</li>
+                <li>Inner Source, when done properly has the best of both worlds</li>
             </ul>
         </section>
         <section>
-          <h2>Second Demo</h2>
-        </section>
-        <section>
-          <h2>Lessons learned about WebGL, Mobile, Performance</h2>
-          <ul>
-            <li>The DOM still sucks</li>
-            <li>Simple shapes are the best</li>
-            <li>Models are hard</li>
-            <li>Not all browsers are equal</li>
-            <li>Still a good idea to test on an actual device</li>
-          </ul>
-        </section>
-        <section>
-          <h2>Models</h2>
-          <ul>
-            <li>3D models come in different forms</li>
-            <li>Free tools include Blender and <a href="https://clara.io">clara.io</a></li>
-            <li>Paid tools are from Autodesk and others</li>
-            <li>Adobe Photoshop was used for at least one demo presented</li>
-          </ul>
-        </section>
-        <section>
-          <h2>Show Me The Code</h2>
-          <ul>
-            <li><a href="https://github.com/infil00p/cordova-photosphere-example">Cordova Photosphere Example</a></li>
-            <li><a href="https://github.com/infil00p/confoo-photosphere">A-Frame Photosphere</a></li>
-            <li><a href="https://github.com/infil00p/confoo-model-fail">A-Frame model fail.</li>
-            <li><a href="https://github.com/infil00p/confoo-videosphere">A Frame Video Sphere example</li>
-          </ul>
+            <h2>Questions?</h2>
         </section>
         <section>
             <h2>Thank You</h2>
         </section>
-
 
 
 <!--
